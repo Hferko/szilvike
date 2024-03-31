@@ -1,0 +1,686 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.w3-bar:before,
+.w3-bar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.w3-animate-top {
+  position: relative;
+  animation: animatetop 0.4s;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.w3-white {
+  color: #000 !important;
+  background-color: rgba(247, 224, 212, 0.9) !important;
+  width: 100vw;
+}
+
+.home {
+  height: 100vh;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(247, 224, 212, 0.8), rgba(247, 224, 212, 0)), url(../dist/img/cica1.jpg) right top;
+  background-size: cover;
+}
+.home_name {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #003333;
+  color: #FC600A;
+}
+.home_name-vezetek {
+  color: teal;
+  font-weight: 700;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 2rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 32px;
+  height: 4px;
+  background: lime;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 32px;
+  height: 4px;
+  background: lime;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 28px;
+  height: 4px;
+  background: lime;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger.open {
+  transform: rotate(360deg);
+  background: transparent;
+}
+.menu-btn_burger.open::before {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+.menu-btn_burger.open::after {
+  width: 30px;
+  transform: rotate(-45deg) translate(3px, -7px);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60vw;
+  opacity: 0.98;
+  visibility: hidden;
+}
+.nav.open {
+  visibility: visible;
+}
+.nav .menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #F7E0D4;
+  list-style-type: none;
+  padding-right: 1rem;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav.open {
+  transform: translateX(0);
+}
+.nav .menu-nav_item {
+  transform: translateY(-100vh);
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav_item img {
+  width: 20%;
+  height: auto;
+  margin-left: 38%;
+}
+.nav .menu-nav_item.open {
+  transform: translateY(0);
+}
+.nav .menu-nav_item .menu-nav_link.active {
+  color: #FC600A;
+}
+.nav .menu-nav_link {
+  display: inline-block;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-weight: 300;
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav_link:hover {
+  color: #FC600A;
+}
+@media screen and (max-width: 320px) {
+  .nav .menu-nav_link {
+    font-size: 1rem;
+  }
+}
+
+.menu-nav_item:nth-child(1) {
+  transition-delay: 0.25s;
+}
+
+.menu-nav_item:nth-child(2) {
+  transition-delay: 0.35s;
+}
+
+.menu-nav_item:nth-child(3) {
+  transition-delay: 0.45s;
+}
+
+.menu-nav_item:nth-child(4) {
+  transition-delay: 0.55s;
+}
+
+.menu-nav_item:nth-child(5) {
+  transition-delay: 0.65s;
+}
+
+.about {
+  padding-bottom: 2rem;
+  background: url(../dist/img/background.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.about .about_title {
+  margin: 2rem auto;
+  font-size: 3rem;
+  color: #FC600A;
+}
+.about_bio-image {
+  height: 60vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(247, 224, 212, 0.7), rgba(247, 224, 212, 0)), url(../dist/img/cica3.jpg) right top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.about_bio-image p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+.about_bio {
+  width: 60%;
+  margin-left: -38%;
+  text-align: center;
+  line-height: 1.6;
+}
+.about_bio .text-secondary {
+  padding-bottom: 1rem;
+}
+@media screen and (max-width: 800px) {
+  .about_bio-image {
+    height: 70vh;
+  }
+}
+
+.skills {
+  width: 60vw;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.skills_skill {
+  background: linear-gradient(to right, #F7E0D4, teal);
+  padding: 0.6rem;
+  border-bottom: 2px solid #FC600A;
+  border-radius: 0px 20px 0px 0px;
+  box-shadow: 10px 4px 20px rgba(252, 96, 10, 0.4);
+}
+.skills_skill h3 {
+  margin: 0.5rem 0;
+}
+.skills_skill li {
+  margin: 0;
+  padding: 8px 0 8px 30px;
+  list-style: none;
+  background-image: url("../dist/img/triangle.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+}
+
+.studies {
+  padding-bottom: 2rem;
+}
+.studies .studies_title {
+  margin: 1rem auto;
+  font-size: 3rem;
+  color: #FC600A;
+}
+.studies_bio-image {
+  height: 60vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(247, 224, 212, 0.7), rgba(247, 224, 212, 0)), url(../dist/img/cica4.jpg) right top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.studies_bio-image p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+.studies_bio {
+  width: 42%;
+  margin-left: -50%;
+  text-align: center;
+  line-height: 1.6;
+}
+.studies_bio .text-secondary {
+  padding-bottom: 1rem;
+}
+@media screen and (max-width: 800px) {
+  .studies_bio-image {
+    height: 70vh;
+  }
+}
+
+.experts {
+  width: 80vw;
+  margin: 2rem auto 0 auto;
+  display: block;
+}
+.experts h2 {
+  margin: 2rem auto;
+  color: teal;
+  text-align: center;
+}
+.experts_oszlop {
+  margin: 1rem;
+}
+.experts_expert {
+  background: #F7E0D4;
+  padding: 0.6rem 0.6rem 2rem 0.6rem;
+  border-bottom: 1px solid #FC600A;
+  border-left: 2px solid teal;
+}
+.experts_expert .suli {
+  padding: 4px;
+  font-size: 1.1rem;
+}
+.experts_expert .suli img {
+  float: right;
+  width: 30%;
+  height: auto;
+}
+.experts_expert .suli a:hover {
+  color: teal;
+}
+.experts_expert .suli::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.experts_expert .icon {
+  margin: -20px -18px;
+}
+.experts_expert .expert_data {
+  text-align: left;
+  background: #009494;
+  padding: 3px 6px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  color: #F7E0D4;
+}
+.experts_expert h3 {
+  margin: 0.6rem;
+  text-align: right;
+  font-weight: 600;
+}
+
+.projects {
+  padding-bottom: 2rem;
+}
+.projects .projects_title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #003333;
+}
+.projects_bio-image {
+  height: 80vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(247, 224, 212, 0.7), rgba(247, 224, 212, 0)), url(../dist/img/cica2.jpg) right top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.projects_bio-image .text-secondary {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.projects_bio {
+  width: 60%;
+  margin-left: -38%;
+  text-align: center;
+  line-height: 1.6;
+}
+.projects_bio .text-secondary {
+  padding-bottom: 1rem;
+}
+@media screen and (max-width: 800px) {
+  .projects_bio-image {
+    height: 70vh;
+  }
+}
+.projects_items {
+  width: 60vw;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.projects_elem {
+  position: relative;
+  border-bottom: 3px solid #FC600A;
+  overflow: hidden;
+}
+.projects_elem img {
+  width: 100%;
+}
+.projects_elem::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: teal;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.projects_elem:hover::after {
+  top: 0;
+  opacity: 0.8;
+}
+.projects_elem:hover .projekts_gomb {
+  opacity: 1;
+}
+.projects .projekts_btns {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  text-align: center;
+}
+.projects .projekts_gomb {
+  opacity: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.projects .projekts_gomb:hover {
+  color: #FC600A;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal_dialog {
+  position: relative;
+  max-width: 800px;
+  max-height: 80vh;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  background: #F7E0D4;
+  overflow: auto;
+  cursor: default;
+}
+
+.modal_dialog > * {
+  padding: 1rem;
+}
+
+.modal_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: teal;
+}
+.modal_header .close_modal {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal_header .close_modal:hover {
+  color: #FC600A;
+}
+
+.modal p {
+  margin-top: 1rem;
+}
+
+.modal_content {
+  line-height: 1.4;
+}
+.modal_content img {
+  float: right;
+  width: 40%;
+  height: auto;
+  margin: 15px;
+  box-shadow: rgba(252, 96, 10, 0.4) 3px 3px 6px 0px, rgba(0, 128, 128, 0.6) -3px -3px 7px 1px;
+}
+.modal_content li {
+  margin: 0;
+  padding: 8px 0 8px 30px;
+  list-style: none;
+  background-image: url("../dist/img/triangle.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+}
+
+.modal_content::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[data-animation] .modal_dialog {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+[data-animation].is-visible .modal_dialog {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+[data-animation=slideInOutDown] .modal_dialog {
+  transform: translateY(100%);
+}
+
+[data-animation=slideInOutTop] .modal_dialog {
+  transform: translateY(-100%);
+}
+
+[data-animation=slideInOutDown].is-visible .modal_dialog,
+[data-animation=slideInOutTop].is-visible .modal_dialog,
+[data-animation=rotateInOutDown].is-visible .modal_dialog {
+  transform: none;
+}
+
+/* The Close Button */
+.modal_header {
+  padding: 2px 16px;
+  background-color: teal;
+  color: white;
+}
+
+.modal_body {
+  padding: 2px 16px;
+}
+
+.modal_footer {
+  padding: 2px 16px;
+  background-color: teal;
+  color: white;
+}
+
+.contact {
+  height: 100vh;
+  padding-top: 20vh;
+  padding-left: 3%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: linear-gradient(to right, rgba(247, 224, 212, 0.8), rgba(247, 224, 212, 0)), url(../dist/img/cica1.jpg) right top;
+  background-size: cover;
+}
+.contact h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.contact_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+.contact .social-icons {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5rem;
+  margin-left: 3rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+    width: 100vw;
+  }
+  .nav .menu-nav {
+    display: block;
+    transform: rotateY(0);
+    height: 100%;
+    left: 0;
+    background: transparent;
+    text-align: left;
+    padding-left: 3%;
+  }
+  .nav .menu-nav_item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .menu-nav_item img {
+    margin-left: 0.5rem;
+    width: 8%;
+  }
+  .nav .menu-nav_link {
+    font-size: 1rem;
+    color: #000;
+  }
+  .experts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .projects .projects_title {
+    font-size: 3rem;
+  }
+  .projects_items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+body {
+  background-color: #F7E0D4;
+  color: #003333;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.1;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+a {
+  color: #003333;
+  text-decoration: none;
+}
+
+.text-secondary {
+  color: #FC600A;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+main .social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  width: auto;
+}
+main .social-icons a {
+  padding: 0.4rem;
+  transition: all 0.5s ease-in-out;
+}
+main .social-icons a:hover {
+  color: #FC600A;
+}
+
+footer {
+  position: fixed;
+  bottom: 2rem;
+  right: -2rem;
+  font-size: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: #003333;
+  rotate: 90deg;
+  translate: -3rem, -5rem;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=main.css.map */

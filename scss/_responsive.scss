@@ -1,0 +1,58 @@
+@include media-md {
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    .nav {
+        visibility: visible;
+        width: 100vw;
+
+        .menu-nav {
+            display: block;
+            transform: rotateY(0);
+            height: 100%;
+            left: 0;            
+            background: transparent;
+            text-align: left;
+            padding-left: 3%;
+
+            &_item {
+                display: inline;
+                padding-right: 1.5rem;
+
+               img {
+                margin-left: 0.5rem;
+                width: 8%;
+               }
+            }
+
+            &_link {
+                font-size: 1rem;
+                color: #000;
+            }
+        }
+    }
+
+    .experts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projects {
+        .projects_title{
+            font-size: 3rem;
+        }
+
+        &_items {
+            grid-template-columns: repeat(2, 1fr);
+        }        
+    }
+}
+
+// @include media-lg {
+//     .projects {
+//         &_items {
+//             grid-template-columns: repeat(3, 1fr);
+//         }
+//     }  
+// }

@@ -1,0 +1,38 @@
+.contact {
+    height: 100vh;
+    padding-top: 20vh;
+    padding-left: 3%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.8),
+        rgba($primary-color, 0)
+      ),
+      url(../dist/img/cica1.jpg) right top;
+    background-size: cover;
+  
+    h1{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &_list{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .social-icons{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5rem;
+        margin-left: 3rem;
+        align-items: center;
+    }
+        
+  } 
+ 

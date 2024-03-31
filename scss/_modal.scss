@@ -1,0 +1,130 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  @include transition-easy;
+}
+
+.modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal_dialog {
+  position: relative;
+  max-width: 800px;
+  max-height: 80vh;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  background: $primary-color;
+  overflow: auto;
+  cursor: default;
+}
+
+.modal_dialog > * {
+  padding: 1rem;
+}
+
+.modal_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $ternary-color;
+
+  .close_modal {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .close_modal:hover {
+    color: $secondary-color;
+  }
+}
+
+.modal p {
+  margin-top: 1rem;
+}
+
+.modal_content {
+  line-height: 1.4;
+
+  img {
+    float: right;
+    width: 40%;
+    height: auto;
+    margin: 15px;   
+    box-shadow: rgba($secondary-color, 0.4) 3px 3px 6px 0px,
+      rgba($ternary-color, 0.6) -3px -3px 7px 1px;
+  }
+
+  li {
+    margin: 0;
+    padding: 8px 0 8px 30px;
+    list-style: none;
+    background-image: url("../dist/img/triangle.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+  }
+}
+.modal_content::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+//------Animációk---------
+[data-animation] .modal_dialog {
+  opacity: 0;
+  @include transition-easy;
+}
+
+[data-animation].is-visible .modal_dialog {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+[data-animation="slideInOutDown"] .modal_dialog {
+  transform: translateY(100%);
+}
+
+[data-animation="slideInOutTop"] .modal_dialog {
+  transform: translateY(-100%);
+}
+
+
+[data-animation="slideInOutDown"].is-visible .modal_dialog,
+[data-animation="slideInOutTop"].is-visible .modal_dialog,
+[data-animation="rotateInOutDown"].is-visible .modal_dialog {
+  transform: none;
+}
+
+
+/* The Close Button */
+.modal_header {
+  padding: 2px 16px;
+  background-color: $ternary-color;
+  color: white;
+}
+
+.modal_body {
+  padding: 2px 16px;
+}
+
+.modal_footer {
+  padding: 2px 16px;
+  background-color: $ternary-color;
+  color: white;
+}

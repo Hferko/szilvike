@@ -1,0 +1,88 @@
+.about {
+  padding-bottom: 2rem;
+  background: url(../dist/img/background.png);
+  background-attachment: fixed;
+  background-size: cover;
+
+  .about_title {
+    margin: 2rem auto;
+    font-size: 3rem;
+    color: $secondary-color;
+  }
+
+  &_bio-image {
+    height: 60vh;
+    width: 100%;    
+
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.7),
+        rgba($primary-color, 0)
+      ),
+      url(../dist/img/cica3.jpg) right top;
+
+    background-size: cover;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+
+    p {
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  &_bio {
+    width: 60%;
+    margin-left: -38%;
+    text-align: center;
+    line-height: 1.6;
+    // background: rgba($primary-color, 0.3);
+
+    .text-secondary {
+      padding-bottom: 1rem;
+    }
+  }
+
+  @media screen and (max-width: $medium) {
+    &_bio-image {
+      height: 70vh;
+    }
+  }
+}
+
+.skills {
+  width: 60vw;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;  
+
+  &_skill {
+    //background: lighten($primary-color, 4);
+    background: linear-gradient(to right, $primary-color, $ternary-color);
+    padding: 0.6rem;
+    border-bottom: 2px solid $secondary-color;
+    border-radius: 0px 20px 0px 0px;
+    box-shadow: 10px 4px 20px rgba($secondary-color, 0.4);
+    
+    h3 {
+      margin: 0.5rem 0;
+    }
+
+    li {
+      margin: 0;
+      padding: 8px 0 8px 30px;
+      list-style: none;
+      background-image: url("../dist/img/triangle.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 20px;
+    }
+  }
+}
+
+

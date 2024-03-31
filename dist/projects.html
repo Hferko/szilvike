@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <title>Szilvy-Munkáim</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="menu-btn">
+            <span class="menu-btn_burger"> </span>
+        </div>
+        <nav class="nav" id="navBar">
+            <ul class="menu-nav">
+                <li class="menu-nav_item">
+                    <a href="index.html" class="menu-nav_link">
+                        Kezdőlap
+                    </a>
+                </li>
+                <li class="menu-nav_item">
+                    <a href="about.html" class="menu-nav_link">
+                        Rólam
+                    </a>
+                </li>
+                <li class="menu-nav_item">
+                    <a href="studies.html" class="menu-nav_link">
+                        Tapasztalat
+                    </a>
+                </li>
+                <li class="menu-nav_item">
+                    <a href="projects.html" class="menu-nav_link active">
+                        Munkáim
+                    </a>
+                </li>
+                <li class="menu-nav_item">
+                    <a href="contact.html" class="menu-nav_link">
+                        Kapcsolat
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects">
+            <div class="projects_bio-image">
+                <div class="projects_bio">
+                    <h1 class="projects_title">Munkáim</h1>
+                </div>
+            </div>
+
+            <div class="projects_items">
+
+                <div class="projects_elem">
+                    <img src="./img/bizonylat.jpg" alt="Bizonylatok">
+                    <div class="projekts_btns">
+                        <p class="projekts_gomb" data-open="bizonylatok">
+                            <i class="fas fa-eye"></i>
+                        </p>
+                        <p class="projekts_gomb" data-open="bizonylatok">
+                            Bizonylatok kezelése
+                        </p>
+                    </div>
+                </div>
+                <div class="projects_elem">
+                    <img src="./img/tax2.jpg" alt="Adók">
+                    <div class="projekts_btns">
+                        <p class="projekts_gomb" data-open="adok">
+                            <i class="fas fa-eye"></i>
+                        </p>
+                        <p class="projekts_gomb" data-open="adok">
+                            Adóügyek
+                        </p>
+                    </div>
+                </div>
+                <div class="projects_elem">
+                    <img src="./img/nyilvantart.jpg" alt="Nyilvántartások">
+                    <div class="projekts_btns">
+                        <p class="projekts_gomb" data-open="nyilvantartas">
+                            <i class="fas fa-eye"></i>
+                        </p>
+                        <p class="projekts_gomb" data-open="nyilvantartas">
+                            Nyilvántartások vezetése
+                        </p>
+                    </div>
+                </div>
+                <div class="projects_elem">
+                    <img src="./img/beszamolok.jpg" alt="Beszámolók">
+                    <div class="projekts_btns">
+                        <p class="projekts_gomb" data-open="beszamolo">
+                            <i class="fas fa-eye"></i>
+                        </p>
+                        <p class="projekts_gomb" data-open="beszamolo">
+                            Számviteli beszámolók elkészítése
+                        </p>
+                    </div>
+                </div>
+                <div class="projects_elem">
+                    <img src="./img/kimutatasok.jpg" alt="Kimutatások">
+                    <div class="projekts_btns">
+                        <p class="projekts_gomb" data-open="kimutatasok">
+                            <i class="fas fa-eye"></i>
+                        </p>
+                        <p class="projekts_gomb" data-open="kimutatasok">
+                            Tanácsadás pénzügyekben
+                        </p>
+                    </div>
+                </div>
+                <div class="projects_elem">
+                    <img src="./img/torvenyek.jpg" alt="Törvények">
+                    <div class="projekts_btns">
+                        <p class="projekts_gomb" data-open="torvenyek">
+                            <i class="fas fa-eye"></i>
+                        </p>
+                        <p class="projekts_gomb" data-open="torvenyek">
+                            Pénzügyi képviselet
+                        </p>
+                    </div>
+                </div>
+                <div class="projects_elem">
+                    <img src="./img/merleg.jpg" alt="Mérleg">
+                    <div class="projekts_btns">
+                        <p class="projekts_gomb" data-open="merleg">
+                            <i class="fas fa-eye"></i>
+                        </p>
+                        <p class="projekts_gomb" data-open="merleg">
+                            Mérleg készítése
+                        </p>
+                    </div>
+                </div>
+
+                <div class="projects_elem">
+                    <img src="./img/szamolo.jpg" alt="Számvitel">
+                    <div class="projekts_btns">
+                        <p class="projekts_gomb">
+                            Ezek csupán a legfontosabb tevékenységeim.
+                        </p>
+                        <p class="projekts_gomb">
+                            Amennyiben speciális kérései vannak,
+                            bátran vegye fel velem a kapcsolatot.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <script defer src="js/socialIcons.js"></script>
+            <div id="socialIcons"></div>
+
+        </section>
+    </main>
+
+    <!------------- MODALOK ------------------->
+    <div class="modal" id="bizonylatok" data-animation="slideInOutTop">
+        <div class="modal_dialog">
+            <div class="modal_header">
+                Bizonylatok kezelése
+                <button class="close_modal" aria-label="close modal" data-close>
+                    ✕
+                </button>
+            </div>
+            <section class="modal_content">
+                <p><strong>Szerződéses megbízás alapján</strong></p>
+                <p> Rendezem és könyvelem kimenő és bejövő bizonylatait, banki és pénztári forgalmát.</p>
+                <img src="../dist/img/bizonylat2.jpg" alt="Bizonylatok rendezése">
+                <p>Képesítésem alapján feladatomnak tekintem a könyvelési folyamatok alapos és részletes elemzését.</p>
+                <p>Ez magában
+                    foglalja a számviteli adatok ellenőrzését, a beszállítóktól és ügyfelektől kapott információk
+                    összehasonlítását, valamint a pénzügyi kimutatásokban történő esetleges hibák kijavítását.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="modal" id="adok" data-animation="slideInOutDown">
+        <div class="modal_dialog">
+            <div class="modal_header">
+                Adóügyek kezelése
+                <button class="close_modal" aria-label="close modal" data-close>
+                    ✕
+                </button>
+            </div>
+            <section class="modal_content">
+                <p><strong>Kezelem Ön és cége ÁFÁ-val kapcsolatos ügyeit</strong></p>
+                <img src="../dist/img/tax1.jpg" alt="Adóügyek kezelése">
+                <p> Nyilvántartást vezetek, elkészítem és benyújtom bevallásait.</p>
+                <p>Tájékoztatást adok az utalandó összegekről, az esetleges törvényi változásokról, a legfrissebb
+                    jogszabályok ismeretében</p>
+            </section>
+        </div>
+    </div>
+
+    <div class="modal" id="nyilvantartas" data-animation="slideInOutDown">
+        <div class="modal_dialog">
+            <div class="modal_header">
+                Nyilvántartások vezetése
+                <button class="close_modal" aria-label="close modal" data-close>
+                    ✕
+                </button>
+            </div>
+            <section class="modal_content">
+                <p><strong>Nyilvántartom tárgyi eszközeit:</strong></p>
+                <img src="../dist/img/nyilvantart2.jpg" alt="Nyilvántartások vezetése">
+                <ul>
+                    <li>eszközök, beruházások mennyiségi és értékbeni nyilvántartása,</li>
+                    <li>egyedi nyilvántartó kartonok vezetése,</li>
+                    <li>kimenő és bejövő számlák értékbeni nyilvántartása, folyószámlák kezelése,</li>
+                    <li>bankforgalommal kapcsolatos nyilvántartások vezetése</li>
+                    <li>pénzforgalmi nyilvántartások vezetése</li>
+                    <li>analitikus nyilvántartások vezetése</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <div class="modal" id="beszamolo" data-animation="slideInOutTop">
+        <div class="modal_dialog">
+            <div class="modal_header">
+                Beszámolók készítése
+                <button class="close_modal" aria-label="close modal" data-close>
+                    ✕
+                </button>
+            </div>
+            <section class="modal_content">
+                <img src="../dist/img/beszamolok2.jpg" alt="Beszámolók készítése">
+                <p> Elkészítem az éves beszámolókat, bevallásokat és zárásokat, illetve tájékoztatom azokról a törvényes
+                    lehetőségekről, amelyekkel optimalizálhatja eredményét.</p>
+                <p>Főkönyvi nyilvántartás elkészítése, kiegészítő melléklet, cash-flow
+                    készítése, akár idegen nyelven is (német, angol)</p>
+                <p>Ellenőrzöm a vállalat pénzügyi adatait, és összegzem azokat a hónap végén. A zárási folyamat során a
+                    megbizonyosodom arról, hogy a számviteli nyilvántartások naprakészek és pontosak, valamint
+                    elemezhetővé teszi a pénzügyi információkat a vezetés számára</p>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="modal" id="kimutatasok" data-animation="slideInOutDown">
+        <div class="modal_dialog">
+            <div class="modal_header">
+                Tanácsadás pénzügyekben
+                <button class="close_modal" aria-label="close modal" data-close>
+                    ✕
+                </button>
+            </div>
+            <section class="modal_content">
+                <p><strong>Kimutatásokat készítek a vezetői döntések támogatásához</strong></p>
+                <img src="../dist/img/kimutatasok2.jpg" alt="Tanácsadás pénzügyekben">
+                <p>Tanácsadás pénzügyi döntésekben megállapodás szerint.</p>
+                <p>Valamint elemezhetővé teszem a pénzügyi információkat a vezetés számára.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="modal" id="torvenyek" data-animation="slideInOutTop">
+        <div class="modal_dialog">
+            <div class="modal_header">
+                Pénzügyi képviselet
+                <button class="close_modal" aria-label="close modal" data-close>
+                    ✕
+                </button>
+            </div>
+            <section class="modal_content">
+                <p><strong>Képviselem a különféle hatóságok, például a NAV és az OEP előtt.</strong></p>
+                <img src="../dist/img/torvenyek2.jpg" alt="Pénzügyi képviselet">
+                <p>Minden adóhatósági, önkormányzati ellenőrzés során személyes részvétel, illetve</p>
+                <p>könyvviteli szolgáltatással összefüggő hivatalos ügyintézés biztosítása</p>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="modal" id="merleg" data-animation="slideInOutTop">
+        <div class="modal_dialog">
+            <div class="modal_header">
+                Mérleg készítése
+                <button class="close_modal" aria-label="close modal" data-close>
+                    ✕
+                </button>
+            </div>
+            <section class="modal_content">
+                <p><strong>Mérleg és az eredménykimutatás</strong></p>
+                <img src="../dist/img/merleg2.jpg" alt="Mérleg készítése">
+                <p>A mérleg ismeretében képet kap a cég pénzügyi helyzetéről. Láthatóvá válik, hogy milyen
+                    bevételei, kiadásai, profitja van cégének, illetve miként épül fel a vagyona.</p>
+                <p>Néhány számviteli standard melyek alapján készítek beszámolókat:</p>
+                <ul>
+                    <li>Magyar számvitel: magyar vállalkozások esetén, amelyek nincsenek tőzsdére bevezetve</li>
+                    <li>IFRS: Európában, tőzsdén jegyzett vállalatok esetén</li>
+                    <li>US GAAP: </li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+
+    <script defer src="js/footer.js"></script>
+    <div id="appFooter"></div>
+
+    <!-- <script src="https://kit.fontawesome.com/2e3c92d358.js" crossorigin="anonymous"></script> -->
+    <script src="js/fonawsome.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+
+</body>
+
+</html>

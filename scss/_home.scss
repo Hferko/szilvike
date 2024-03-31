@@ -1,0 +1,27 @@
+.home {
+  height: 100vh;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+      to right,
+      rgba($primary-color, 0.8),
+      rgba($primary-color, 0)
+    ),
+    url(../dist/img/cica1.jpg) right top;
+  background-size: cover;
+
+  &_name {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid setTextColor($primary-color);
+    color: $secondary-color;
+
+    &-vezetek {
+      color: $ternary-color;
+      font-weight: 700;
+    }
+  }
+}
